@@ -10,10 +10,10 @@ dockerChip-seq是一个用bash脚本编写的一种用于研究蛋白质与DNA�
 
 1. 确保系统上安装了 Docker。
 
-2. 构建 Docker 镜像：
+2. 构建 Docker 镜像（名称为mycentos:0.1）：
 
    ```bash
-   docker build -f mydockerfile-centos -t mycentos:0.1 .
+   docker build -f Dockerfile -t mycentos:0.1 .
    ```
 
 ------
@@ -23,7 +23,7 @@ dockerChip-seq是一个用bash脚本编写的一种用于研究蛋白质与DNA�
 在命令行输入：
 
 ```bash
-./run.sh <work_path> <file:accession list included>
+./run.sh <work_path> <file_path:accession number(s) to be analyzed>
 ```
 
 #### 示例
@@ -33,7 +33,7 @@ dockerChip-seq是一个用bash脚本编写的一种用于研究蛋白质与DNA�
 输入：
 
 ```bash
-./run.sh <work_path> <file_path:accession number(s) to be analyzed>
+./run.sh ./chip_seq ./chip_seq/SRR_Acc_List.txt
 ```
 
 可以实现在当前目录用Chip-seq处理序列，其中文件格式为每行一条序列号
